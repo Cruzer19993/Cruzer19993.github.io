@@ -1,3 +1,4 @@
+html{scroll-behavior:smooth;}
 body{margin:0px;padding:0px;overflow-x:hidden;color:#EDF2F4;font-family:Alata;overflow-y:hidden;}
 
 @media (min-width:900px){
