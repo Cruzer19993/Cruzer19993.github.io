@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8"/>
+	<title>Stacja Paliw</title>
+	<link rel="stylesheet" type="text/css" href="styl3.css"/>
+	<script>
+		function Oblicz(rodzaj,litry){
+		rodzaj = parseInt(rodzaj);
+		var out=0;
+			switch(rodzaj){
+				case 1:
+					out=4*parseInt(litry);
+					document.getElementById("OUTPUT").innerHTML = "koszt paliwa: " + out + " zł" 
+				break;
+				case 2:
+					out=3.5*parseInt(litry);
+					document.getElementById("OUTPUT").innerHTML = "koszt paliwa: " + out + " zł" 
+				break;
+				default:
+					document.getElementById("OUTPUT").innerHTML = "koszt paliwa: 0 zł" 
+				break;
+			}
+		}
+	</script>
+</head>
+<body>
+	<div>
+		<div id="GL">
+			<h1>Stacja Paliw</h1>
+		</div>
+		<div id="GP">
+		<a href="stacja.html">
+			<img src="home.png" alt="home png"/></a>
+		<a href="obliczenia.html">
+			<img src="znak.png" alt="znak png"/></a>
+		</div>
+	</div>
+	
+	<div id="PG">
+		<h3>Oblicz koszt paliwa</h3>
+		<label style="display:block;" for="inpt"style="display:inline-block;">Rodzaj paliwa(1-benzyna, 2-olej napędowy)</label>
+		<input style="display:block;" id="inpt"type="number"/>
+		<label style="display:block;" for="inpt2">Ile litrów</label>
+		<input style="display:block;" id="inpt2" type="number"/>
+		<button onclick="Oblicz(document.getElementById('inpt').value,document.getElementById('inpt2').value)">OBLICZ</button>
+		<p id="OUTPUT"></p>
+	</div>
+	
+	<div>
+		<div id="BGL">
+			<a href="kwerendy.txt">Pobierz kwerendy</a>
+		</div>
+		<div id="BGP">
+			<img src="samochod.png" alt="samochód"/>
+		</div>
+	</div>
+	
+	<div id="ST">
+		<p>Stronę opracował: XXXXXXXXXXX</p>
+	</div>
+</body>
+</html>
