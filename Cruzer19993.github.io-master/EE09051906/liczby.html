@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="utf-8"/>
+	<title>Ciągi liczbowe</title>
+	<link rel="stylesheet" type="text/css" href="styl2.css"/>
+	<script>
+	function Ciag(A1,R,N){
+		A1= parseInt(A1);
+		R= parseInt(R);
+		N= parseInt(N);
+		var Sout = "Cciąg arytmetyczny zawiera wyrazy: ";
+		var out;
+		window.alert(A1+R+N);
+		for (i =0; i < N+1; i++){
+				out = A1+i*R;
+			
+		Sout += ", "+out;
+		}
+		window.alert(Sout);
+		document.getElementById("OUTPUT").innerHTML = Sout;
+	}
+	</script>
+</head>
+<body>
+	<div>
+		<div id="BG1">
+			<h2>Poznaj Ciągi Liczbowe</h2>
+		</div>
+		<div id="BG2">
+			<a href="liczby.html"><h5>Ciągi arytmetyczne</</a>
+		</div>
+		<div id="BG3">
+			<a href="fib.html"><h5>Ciąg Fibonacciego</h5></a>
+		</div>
+		<div id="BG4">
+			<img src="obraz1.png" alt="Fibonacci"/>
+		</div>
+	</div>
+	
+	<div>
+		<div id="GL">
+			<ol>
+				<li>ciągi arytmetyczne</li>
+				<li>ciągi geometryczne</li>
+				<li>ciąg Fibonacciego</li>
+			</ol>
+		</div>
+		<div id="GP">
+			<h2>Generowanie ciągu arytmetycznego</h2>
+			<text style="display:block;">Pierwszy wyraz A1: <input style="display:inline;"id="A1INPT" type="number"/></text>
+			<text style="display:block;">Różnica ciągu R: <input style="display:inline;"id="RINPT" type="number"/></text>
+			<text style="display:block;">Liczba wyrazów w ciągu N: <input id="NINPT" type="number"/></text>
+			<button onclick="Ciag(document.getElementById('A1INPT').value,document.getElementById('RINPT').value,document.getElementById('NINPT').value)">Generuj Ciąg</button>
+			<p id="OUTPUT"></p>
+		</div>
+	</div>
+	
+	<div id="ST">
+		<p>Autor: XXXXXXXXXX</p>
+	</div>
+</body>
+</html>
