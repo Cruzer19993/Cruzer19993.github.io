@@ -112,7 +112,15 @@
         </div>
       </div>
     </body>
-
+    
+    <div class="loader-wrapper">
+      <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+    <script>
+        $(window).on("load",function(){
+          $(".loader-wrapper").fadeOut("slow");
+        });
+    </script>
 </html>
 <!--Do poprawek:
 1.vertical align listy odpowiadającej za napisy na frontowej stronie. Aczkolwiek na razie działa.
