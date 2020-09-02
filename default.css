@@ -16,6 +16,9 @@ body{margin:0px;padding:0px;overflow-x:hidden;color:#EDF2F4;font-family:Alata;}
     #ContactContent{
         background-position: center -500px !important;
     }
+    #FrontPageContainer{
+    animation-name:BackgroundHueShift !important;
+    }
 }
 
 @media(min-width:580px){
