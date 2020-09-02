@@ -17,7 +17,7 @@ body{margin:0px;padding:0px;overflow-x:hidden;color:#EDF2F4;font-family:Alata;}
         background-position: center -500px !important;
     }
     #FrontPageContainer{
-    animation-name:BackgroundHueShift !important;
+    animation-name:none !important;
     }
 }
 
