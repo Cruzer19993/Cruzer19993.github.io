@@ -45,7 +45,7 @@ div{
     background-color:yellow;
 }
 
-#Footer::p{
+#Footer > p{
 margin:8px;
 
 }
