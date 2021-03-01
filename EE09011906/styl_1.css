@@ -1,0 +1,28 @@
+body {
+	font-family: Verdana;
+	margin: auto;
+}
+header, footer {
+	background-color: #4682B4;
+	color: white;
+	padding: 20px;
+	font-family: 120%;
+	text-align: center;
+}
+#l {
+	background-color: #40E0D0;
+	width: 40%;
+	height: 520px;
+	float: left;
+}
+#p {
+	background-color: #40E0D0;
+	width: 60%;
+	height: 520px;
+	float: left;
+}
+img {
+	padding: 5px;
+	margin: 10px;
+	border: 1px solid #000080;
+}

@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    font-family: Garamod;
+}
+
+#l {
+    float: left;
+    width: 25%;
+}
+
+#p {
+    float: left;
+    width: 75%;
+}
+
+#l1 {
+    height: 500px;
+    background-color: lavender;
+}
+
+#l2 {
+    height: 300px;
+    background-color: lavender;
+}
+
+#p1 {
+    height: 150px;
+    background-color: indigo;
+    color: white;
+    font-size: 200%;
+    text-align: center;
+}
+
+#p2 {
+    height: 650px;
+    background-color: lavender;
+    font-size: 200%;
+    text-align: center;
+}
+
+footer {
+    background-color: indigo;
+    color: white;
+    text-align: right;
+}
+
+ul {
+    list-style-type: square;
+}
+
+img {
+    padding: 5px;
+    margin: 10px;
+}
+
+img:hover {
+    padding: 4px;
+    border: indigo 1px solid;
+}

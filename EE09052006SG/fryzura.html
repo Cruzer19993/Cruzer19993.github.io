@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+ <html lang="pl">
+     <head>
+         <meta charset="utf-8">
+         <title>Usługi fryzjerskie</title>
+         <link rel="stylesheet" href="styl2.css" type="text/css" />
+     </head>
+     <body>
+        <div id="lewy">
+            <div id="l1">
+                <a href="index.html"><h2>SALON FRYZJERSKI</h2></a>
+                <img src="obraz2.jpg" alt="Czesanie">
+           </div>
+           <div id="l2">
+                <h3>Dziś promocja na strzyżenie włosów</h3>
+                <p><input type="radio" name="a" id="krotkie">Krótkie</p>
+                <p><input type="radio" name="a" id="srednie">Srednie</p>
+                <p><input type="radio" name="a" id="poldlugie">Półdługie</p>
+                <p><input type="radio" name="a" id="dlugie">Długie</p>
+                <button onclick=wlosy()>Odkryj promocję</button>
+                <p id="wynik"></p>
+           </div>
+        </div>
+        <div id="prawy">
+            <div id="p1">
+                <h2>MENU</h2>
+            </div>
+            <div id="p2">
+                <ol>
+                    <a href="fryzura.html"><li>Strzyżenie</li></a>
+                        <ul>
+                            <li>krótkie</li>
+                            <li>średnie</li>
+                            <li>półdługie</li>
+                            <li>długie</li>
+                        </ul>
+                    <li>Czesanie</li>
+                    <li>Koloryzacja</li>
+                </ol>
+            </div>
+
+            <div id="p3">
+                <img src="obraz1.jpg" alt="Fryzjer">
+            </div>
+        </div>
+        <footer>
+            <p>Autor: PESEL</p>
+        </footer> 
+        <script>
+            function wlosy(){
+                var a = document.getElementById("krotkie");
+                var b = document.getElementById("srednie");
+                var c = document.getElementById("poldlugie");
+                var d = document.getElementById("dlugie");
+                var e = 0;
+                if(a.checked == true){
+                    e = 25;
+                }
+                if(b.checked == true){
+                    e = 30;
+                }
+                if(c.checked == true){
+                    e = 40;
+                }
+                if(d.checked == true){
+                    e = 50;
+                }
+                document.getElementById("wynik").innerHTML = "Cena strzyżenia: " + e;
+            }
+        </script>
+     </body>
+ </html>

@@ -1,78 +1,80 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-	 <meta name="viewport"/>
-	 <meta charset="utf-8"/>
-	 <link rel="stylesheet" type="text/css" href="./styl.css"/>
-	 <title>Działania matematyczne</title>
-	 <script>
-		function Dzialanie(co,a,b){
-		window.alert(co+a+b);
-		var out=0;
-			switch(co){
-				case 1:
-					out=parseInt(a,10)+parseInt(b,10);
-					document.getElementById("Wynik").innerHTML = "Wynik: " +out;
-					break;
-				case 2:
-					out=parseInt(a,10)-parseInt(b,10);
-					document.getElementById("Wynik").innerHTML = "Wynik: " +out;
-					break;
-				case 3:
-					out=parseInt(a,10)*parseInt(b,10);
-					document.getElementById("Wynik").innerHTML = "Wynik: " +out;
-					break;
-				case 4:
-					out=parseInt(a,10)/parseInt(b,10);
-					document.getElementById("Wynik").innerHTML = "Wynik: " +out;
-					break;
-				case 5:
-					out=Math.pow(parseInt(a,10),parseInt(b,10));
-					document.getElementById("Wynik").innerHTML = "Wynik: " +out;
-					break;
-			}
-		}
-	 </script>
+<meta charset = "utf-8">
+<title>Działania matematyczne</title>
+<link rel="stylesheet" href="styl.css" type="text/css"/>
 </head>
+
 <body>
-	<div id="Gorny">
-		<div id="BG">
-			<img src="logo.jpg" alt="matematyka"/>
-		</div>
-		<div id="BGN">
-			<h1>Pomocnik Matematyczny</h1>
-		</div>
-		<div id="BG">
-			<a href="dzialania.html"><h4>Działania</h4></a>
-		</div>
-		<div id="BG">
-			<a href="mnozenie.html"><h4>Tabliczka mnożenia</h4></a>
-		</div>
-	</div>
-	<div>
-		<div id="Lewy">
-			<h3>Proste działania</h3>
-			<p>Liczba A: <input style="color:orange;" id="INPTA" type="number"/></p>
-			<p>Liczba B: <input style="color:orange;" id="INPTB" type="number"/></p>
-			<button onclick="Dzialanie(1,document.getElementById('INPTA').value,document.getElementById('INPTB').value)" id="BTN">+</button>
-			<button onclick="Dzialanie(2,document.getElementById('INPTA').value,document.getElementById('INPTB').value)" id="BTN">-</button>
-			<button onclick="Dzialanie(3,document.getElementById('INPTA').value,document.getElementById('INPTB').value)" id="BTN">*</button>
-			<button onclick="Dzialanie(4,document.getElementById('INPTA').value,document.getElementById('INPTB').value)" id="BTN">/</button>
-			<button onclick="Dzialanie(5,document.getElementById('INPTA').value,document.getElementById('INPTB').value)" id="BTN">A^B</button>
-			<p id="Wynik"></p>
-		</div>
-		<div id="Prawy">
-			<ul>
-				<li>dodawanie</li>
-				<li>odejmowanie</li>
-				<li>mnożenie</li>
-				<li>dzielenie</li>
-				<li>potęgowanie</li>
-			</ul>
-		</div>
-	</div>
-	<div id="FTR">
-		<p>Autor: XXXXXXXXXXX</p>
-	</div>
+
+<div id="b1">
+<img src="logo.jpg" alt="matematyka">
+</div>
+<div id="b2">
+<h1>Pomocnik Matematyczny</h2>
+</div>
+<div id="b3">
+<a href="dzialania.html"><h4>Działania</h4></a>
+</div>
+<div id="b4">
+<a href="mnozenie.html"><h4>Tabliczka mnożenia</h4></a>
+</div>
+
+<div id="l">
+<h3>Proste działanie</h3>
+<p>liczba A:<input type="text" id="A"></input></p>
+<p>liczba B:<input type="text" id="B"></input></p>
+<button onclick=dodawanie()>+</button>
+<button onclick=odejmowanie()>-</button>
+<button onclick=mnozenie()>*</button>
+<button onclick=dzielenie()>/</button>
+<button onclick=potegowanie()>A^B</button>
+<p id="wynik"></p>
+</div>
+<div id="p">
+ <ul>
+  <li>dodawanie</li>
+  <li>odejmowanie</li>
+  <li>mnożenie</li>
+  <li>dzielenie</li>
+  <li>potęgowanie</li>
+ </ul> 
+</div>
+<footer>
+<p>Autor: PESEL</p>
+</footer>
+<script>
+    function dodawanie(){
+        var a = +document.getElementById("A").value;
+        var b = +document.getElementById("B").value;
+        var wynik = a + b;
+        document.getElementById("wynik").innerHTML = "Wynik: " + wynik;
+    }
+    function odejmowanie(){
+        var a = +document.getElementById("A").value;
+        var b = +document.getElementById("B").value;
+        var wynik = a - b;
+        document.getElementById("wynik").innerHTML = "Wynik: " + wynik;
+    }
+    function mnozenie(){
+        var a = +document.getElementById("A").value;
+        var b = +document.getElementById("B").value;
+        var wynik = a * b;
+        document.getElementById("wynik").innerHTML = "Wynik: " + wynik;
+    }
+    function dzielenie(){
+        var a = +document.getElementById("A").value;
+        var b = +document.getElementById("B").value;
+        var wynik = a / b;
+        document.getElementById("wynik").innerHTML = "Wynik: " + wynik;
+    }
+    function potegowanie(){
+        var a = +document.getElementById("A").value;
+        var b = +document.getElementById("B").value;
+        var wynik = a ** b;
+        document.getElementById("wynik").innerHTML = "Wynik: " + wynik;
+    }
+</script>
 </body>
 </html>
