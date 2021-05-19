@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Twoje BMI</title>
+        <link rel="stylesheet" type="text/css" href="styl3.css"/>
+    </head>
+    <body>
+        <div id="Container">    
+            <div id="LogoBlock">
+                <img src="wzor.png" alt="wzór BMI" style="width:auto;"/>
+            </div>
+            <div id="bannerBlock">
+                <h1>Oblicz swoje BMI</h1>
+            </div>
+        </div>
+        <div id="mainBlock">
+            <table>
+                <tr>
+                    <th>Interpretacja BMI</th>
+                    <th>Wartość minimalna</th>                    
+                    <th>Wartość maksymalna</th>
+                </tr>
+                <tr>
+                    <td>niedowaga</td>
+                    <td>0</td>
+                    <td>18</td>
+                </tr>
+                <tr>
+                    <td>waga prawidlowa</td>
+                    <td>19</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>nadwaga</td>
+                    <td>26</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>otylosc</td>
+                    <td>31</td>
+                    <td>100</td>
+                </tr>
+            </table>
+        </div>
+        <div id="LeftBlock">
+            <h2>Podaj wagę i wzrost</h2>
+        <div id="form" style="margin:80px;">
+            <input type="number" placeholder="Waga" id="INPT_A" min="1"/>
+            <input type="number" placeholder="Wzrost w cm" id="INPT_B" min="1"/>
+            <button onclick="ObliczBMI(document.getElementById('INPT_A').value, document.getElementById('INPT_B').value,)">Oblicz i zapamiętaj wynik</button>
+            <p id="Waga"></p>
+            <p id="BMI"></p>
+        </div>
+        </div>
+
+        <div id="RightBlock">
+            <img src="rys1.png" alt="ćwiczenia"/>
+        </div>
+        <div id="footer">
+            <p>Autor: XXXXXXXXXXX</p>
+        </div>
+    </body>
+    <script>
+        function ObliczBMI(a,b){
+            //a - masa, b - wzrost
+            document.getElementById('Waga').innerHTML = "Twoja waga: " + a + ", Twój wzrost: " + b;
+            b= b/100;
+            var temp = b*b;
+            var BMI = a/temp;
+            document.getElementById('BMI').innerHTML = "BMI Wynosi: " + BMI.toFixed(2);
+        }
+    </script>
+</html>
